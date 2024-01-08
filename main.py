@@ -37,7 +37,10 @@ class HTTPServer(TCPServer):
 
     status_codes = {
         200: 'OK',
+        401: 'unauthorized',
+        403: 'forbidden',
         404: 'Not Found',
+        504: 'gateway timeout'
     }
 
     def handle_request(self, data):
